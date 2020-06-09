@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import html2 from 'rollup-plugin-html2';
 import { terser } from 'rollup-plugin-terser';
+import copy from 'rollup-plugin-copy';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
 
@@ -34,6 +35,9 @@ export default {
         : false,
     }),
     production && terser(),
+    copy({
+      targets: [{ src: 'static/*', dest: 'dist' }],
+    }),
     !production && serve('dist'),
     !production && livereload('dist'),
   ],
