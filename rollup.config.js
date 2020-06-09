@@ -35,10 +35,24 @@ export default {
         : false,
     }),
     production && terser(),
-    copy({
-      targets: [{ src: 'static/*', dest: 'dist' }],
-    }),
-    !production && serve('dist'),
-    !production && livereload('dist'),
+    production &&
+      copy({
+        targets: [{ src: 'static/*', dest: 'dist' }],
+      }),
+    !production &&
+      serve({
+        contentBase: ['dist', 'static'],
+      }),
+    !production &&
+      livereload({
+        watch: ['dist', 'static'],
+        // hack to watch all files; exts is expected to be an array, checking
+        // if should reload for changed file extension via indexOf method
+        exts: {
+          indexOf() {
+            return 0;
+          },
+        },
+      }),
   ],
 };
