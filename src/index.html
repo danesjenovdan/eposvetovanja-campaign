@@ -3,24 +3,153 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document30</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. In temporibus,
-      explicabo aut voluptatem ratione doloremque ad ab cumque veniam vero
-      omnis, sapiente voluptate odit asperiores minus cupiditate nihil ducimus
-      libero.
-    </p>
-
-    <div class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
-      <div class="flex-shrink-0"></div>
-      <div class="ml-6 pt-1">
-        <h4 class="text-xl text-gray-900 leading-tight">ChitChat</h4>
-        <p class="text-base text-gray-600 leading-normal">
-          You have a new message!
-        </p>
+    <div id="section-1" class="container px-8 pb-10 pt-32 relative h-screen bg-gradient-primary">
+      <div class="absolute top-0 inset-x-0">
+        <div class="w-24 p-4 mx-auto bg-gradient-white">
+          <img src="https://cdn.parlametar.hr/v1/parlassets/img/logo-parlameter.svg" alt="Parlametar logo">
+        </div>
+      </div>
+      <h1 class="mb-8 text-4xl italic font-medium leading-tight text-center">
+        DO YOU WANT TO HAVE A SAY IN THE WAY YOUR COUNTRY IS GOVERNED?
+      </h1>
+      <button class="flex items-center mx-auto bg-primary border-4 border-black font-medium text-2xl px-4 py-2">
+        YES
+        <img src="arrow-square.svg" alt="arrow icon" class="w-8 ml-16">
+      </button>
+      <div class="absolute left-0 right-0 bottom-0 text-center underline font-bold mb-8">
+        <a href="#section-2" class="down-arrow-before down-arrow-after">Ok, I get it. I can’t be. But why not?</a>
       </div>
     </div>
+    <div id="section-2" class="container px-8 py-10 relative h-screen bg-gradient-secondary">
+      <h1 class="mb-8 text-4xl italic font-medium leading-tight text-center">
+        BECAUSE YOUR MPs DON’T WANT YOU TO BE INVOLVED.
+      </h1>
+      <h2 class="text-center text-xl font-light leading-tight px-4">
+        In the previous sitting of Sabor, less than 40% bills were passed without proper public debate.
+      </h2>
+      <div class="text-center p-16 text-primary">
+        GRAF
+      </div>
+      <div class="absolute left-0 right-0 bottom-0 text-center underline font-bold mb-8 text-secondary">
+        <a href="#section-3" class="down-arrow-before down-arrow-after">Is it because those bills were so urgent?</a>
+      </div>
+    </div>
+    <div id="section-3" class="container px-8 py-10 relative bg-gradient-primary-flip">
+      <h2 class="text-center text-xl font-light leading-tight px-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae eveniet eligendi recusandae fugit,
+        deserunt explicabo error ad provident similique doloribus quae adipisci enim sunt reiciendis cupiditate,
+        fugiat quaerat corrupti?
+      </h2>
+      <div class="text-center p-16 text-primary">
+        CAROUSEL
+      </div>
+      <div class="absolute left-0 right-0 bottom-0 text-center underline font-bold mb-8 text-secondary">
+        <a href="#section-4" class="down-arrow-before down-arrow-after">What can I do about it?</a>
+      </div>
+    </div>
+    <div id="section-4" class="container p-8">
+      <div class="border border-primary p-6 text-xl font-light leading-tight">
+        <p class="mb-6">
+          A coalition of NGOs asked all parties that are running on the curent election if they plan to adopt a rule
+          that would make it illegal for parliamentary members to skip the disscusion. While some of them did commit
+          to it, here is also a list of those that did not.
+        </p>
+        <p>
+          <strong>Help us make them embarrased, maybe that wil change their minds!</strong>
+        </p>
+      </div>
+      <div class="mt-8 p-6 text-xl font-light leading-tight bg-gradient-primary">
+        <div>
+          <hr class="border-primary">
+          <div class="my-4">
+            <div class="font-bold text-xl italic text-center flex justify-center items-center">
+              HDZ
+              <div class="inline-block w-10 h-10 p-2 ml-6 bg-black rounded-full">
+                <img src="thumbs-down.svg" alt="thumbs up icon" class="w-full h-full">
+              </div>
+            </div>
+            <div class="mt-2">
+              <button class="block mx-auto bg-primary border-2 border-black font-medium text-sm px-2 py-1">
+                Tell them this is important
+              </button>
+            </div>
+          </div>
+          <hr class="border-primary">
+        </div>
+        <div>
+          <div class="my-4">
+            <div class="font-bold text-xl italic text-center flex justify-center items-center">
+              HDZ
+              <div class="inline-block w-10 h-10 p-2 ml-6 bg-secondary rounded-full">
+                <img src="thumbs-up.svg" alt="thumbs up icon" class="w-full h-full">
+              </div>
+            </div>
+          </div>
+          <hr class="border-primary">
+        </div>
+      </div>
+    </div>
+    <div id="section-5" class="container p-8 bg-gradient-primary-to-secondary">
+      <h1 class="pb-8 text-2xl italic font-medium leading-tight text-center">
+        NGOs SUPPORTING OUR CALL
+      </h1>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="relative pb-square bg-white">
+          <div class="absolute h-full w-full">
+            {icon}
+          </div>
+        </div>
+        <div class="relative pb-square bg-white">
+          <div class="absolute h-full w-full">
+            {icon}
+          </div>
+        </div>
+        <div class="relative pb-square bg-white">
+          <div class="absolute h-full w-full">
+            {icon}
+          </div>
+        </div>
+        <div class="relative pb-square bg-white">
+          <div class="absolute h-full w-full">
+            {icon}
+          </div>
+        </div>
+        <div class="relative pb-square bg-white">
+          <div class="absolute h-full w-full">
+            {icon}
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container p-8">
+      <div class="flex flex-wrap text-center">
+        <div class="w-full mb-8">
+          <p class="font-light text-sm mb-4">Pripremili</p>
+          <div class="flex">
+            <div class="w-1/2">
+              <a href="https://danesjenovdan.si/" target="_blank" class="block">
+                <img src="djnd-logo.svg" alt="DJND logo" class="h-8 mx-auto">
+              </a>
+            </div>
+            <div class="w-1/2">
+              <a href="https://www.gong.hr/" target="_blank" class="block">
+                <img src="gong-logo.png" alt="Gong logo" class="h-8 mx-auto" style="filter:brightness(0)">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full mb-8">
+          <p class="font-light text-sm mb-4">Zahvaljujući podršci</p>
+          <div>
+            <a href="https://www.ned.org/" target="_blank" class="block">
+              <img src="ned-logo.png" alt="NED logo" class="h-8 mx-auto">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,12 +1,32 @@
-html {
-  font-size: 15px;
+.bg-gradient-white {
+  background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.5) 100%);
+}
 
-  body {
-    padding: 2rem;
-    background-color: green;
+.bg-gradient-primary {
+  background-image: linear-gradient(-224deg, #f2b7b8 0%, #f8ebec 100%);
+}
 
-    h1 {
-      background-color: red;
-    }
-  }
+.bg-gradient-primary-flip {
+  background-image: linear-gradient(-44deg, #f2b7b8 0%, #f8ebec 100%);
+}
+
+.bg-gradient-secondary {
+  background-image: linear-gradient(-224deg, rgba(79, 190, 212, 0.5) 0%, rgba(233, 245, 247, 0.5) 100%);
+}
+
+.bg-gradient-primary-to-secondary {
+  background-image: linear-gradient(-224deg, rgba(242, 183, 184, 0.5) 0%, rgba(172, 217, 227, 0.5) 100%);
+}
+
+.down-arrow-before::before,
+.down-arrow-after::after {
+  content: '';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.25em;
+  transform: translateY(0.33em);
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.9 27.5"><path d="M8.3 5.1v20.7h-2V5.1z"/><path d="M13.6 19.5L15 21l-7.7 6.5L0 21l1.3-1.5 6 5.4zM8.3 0v3.8h-2V0z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 }
