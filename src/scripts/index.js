@@ -2,6 +2,15 @@ import u from 'umbrellajs';
 import { debounce } from 'lodash-es';
 import '../styles/index.css';
 
+// polyfills
+if (!Array.prototype.findIndex) {
+  const script = document.createElement('script');
+  script.src =
+    'https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.findIndex';
+  document.body.appendChild(script);
+}
+
+// evading button
 u('.js-evading-button').on('mouseover touchstart click', (event) => {
   event.preventDefault();
   const w = window.innerWidth;
@@ -12,6 +21,7 @@ u('.js-evading-button').on('mouseover touchstart click', (event) => {
   event.currentTarget.blur();
 });
 
+// smooth scroll links
 u('a[href^="#"').on('click', (event) => {
   event.preventDefault();
   u(event.currentTarget.getAttribute('href')).scroll();

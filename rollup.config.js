@@ -1,20 +1,24 @@
+import rimraf from 'rimraf';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import html2 from 'rollup-plugin-html2';
 import { terser } from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-copy';
+import { getBabelOutputPlugin } from '@rollup/plugin-babel';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
 
 const production = process.env.NODE_ENV === 'production';
+
+rimraf.sync('dist');
 
 export default {
   input: 'src/scripts/index.js',
   output: {
     dir: 'dist',
     entryFileNames: 'bundle.[hash].js',
-    format: 'iife',
+    format: 'esm',
     sourcemap: true,
   },
   plugins: [
@@ -34,11 +38,14 @@ export default {
           }
         : false,
     }),
-    production && terser(),
+    getBabelOutputPlugin({
+      presets: [['@babel/preset-env', { modules: 'umd' }]],
+    }),
     production &&
       copy({
         targets: [{ src: 'static/*', dest: 'dist' }],
       }),
+    production && terser(),
     !production &&
       serve({
         contentBase: ['dist', 'static'],
