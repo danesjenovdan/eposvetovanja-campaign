@@ -1,5 +1,9 @@
 .bg-gradient-white {
-  background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.5) 100%);
+  background-image: linear-gradient(
+    to right,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
 }
 
 .bg-gradient-primary {
@@ -11,11 +15,19 @@
 }
 
 .bg-gradient-secondary {
-  background-image: linear-gradient(-224deg, rgba(79, 190, 212, 0.5) 0%, rgba(233, 245, 247, 0.5) 100%);
+  background-image: linear-gradient(
+    -224deg,
+    rgba(79, 190, 212, 0.5) 0%,
+    rgba(233, 245, 247, 0.5) 100%
+  );
 }
 
 .bg-gradient-primary-to-secondary {
-  background-image: linear-gradient(-224deg, rgba(242, 183, 184, 0.5) 0%, rgba(172, 217, 227, 0.5) 100%);
+  background-image: linear-gradient(
+    -224deg,
+    rgba(242, 183, 184, 0.5) 0%,
+    rgba(172, 217, 227, 0.5) 100%
+  );
 }
 
 .down-arrow-before::before,
@@ -29,4 +41,19 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.1875rem rgba(37, 133, 152, 0.5);
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
 }
