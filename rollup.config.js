@@ -30,6 +30,7 @@ export default {
     }),
     html2({
       template: 'src/index.html',
+      onlinePath: '.',
       minify: production
         ? {
             removeComments: true,
