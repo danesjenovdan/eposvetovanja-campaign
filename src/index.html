@@ -17,7 +17,7 @@
       <h1 class="sm:mt-8 mb-8 text-4xl sm:text-6xl italic font-medium leading-tight text-center max-w-screen-lg mx-auto xl:mb-16">
         DO YOU WANT TO HAVE A SAY IN THE WAY YOUR COUNTRY IS GOVERNED?
       </h1>
-      <button class="flex items-center mx-auto bg-primary border-4 border-black font-medium text-2xl sm:text-5xl px-4 py-2">
+      <button class="js-evading-button flex items-center mx-auto bg-primary border-4 border-black font-medium text-2xl sm:text-5xl px-4 py-2 relative z-50">
         YES
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="4 4 17 17" class="w-8 sm:w-12 ml-16">
           <path d="M20 4H4v16h16V4zm-1 15H5V5h14v14z"/>
@@ -83,24 +83,40 @@
       </h2>
       <div id="carousel" class="xl:flex max-w-screen-xl mx-auto relative">
         <div class="flex-1">
-          <img src="http://placekitten.com/200/150" class="w-full max-w-xl mx-auto xl:ml-0">
+          <div class="js-carousel-images flex overflow-hidden max-w-xl mx-auto xl:ml-0">
+            <div class="flex-none w-full">
+              <img src="http://placekitten.com/200/151" class="w-full">
+            </div>
+            <div class="flex-none w-full">
+              <img src="http://placekitten.com/200/152" class="w-full">
+            </div>
+            <div class="flex-none w-full">
+              <img src="http://placekitten.com/200/153" class="w-full">
+            </div>
+            <div class="flex-none w-full">
+              <img src="http://placekitten.com/200/154" class="w-full">
+            </div>
+            <div class="flex-none w-full">
+              <img src="http://placekitten.com/200/155" class="w-full">
+            </div>
+          </div>
           <div class="flex items-center justify-center xl:justify-start mt-8 -mx-1 xl:ml-32 relative z-10">
-            <button class="w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary bg-secondary"></button>
-            <button class="w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary"></button>
-            <button class="w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary"></button>
-            <button class="w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary"></button>
-            <button class="w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary"></button>
+            <button class="js-carousel-index w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary bg-secondary"></button>
+            <button class="js-carousel-index w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary"></button>
+            <button class="js-carousel-index w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary"></button>
+            <button class="js-carousel-index w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary"></button>
+            <button class="js-carousel-index w-4 h-4 xl:w-6 xl:h-6 mx-1 border-2 border-primary"></button>
           </div>
         </div>
         <div class="flex justify-between -mt-6 xl:-mb-3 xl:absolute inset-x-0 bottom-0">
-          <button class="relative w-16 h-8 xl:w-24 xl:h-12">
+          <button class="js-carousel-prev relative w-16 h-8 xl:w-24 xl:h-12 z-20">
             <div class="absolute top-0 left-0 w-1/2 h-full bg-primary"></div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.5 15" fill="currentColor" class="absolute top-0 left-0 w-full h-full py-1 xl:py-2 text-secondary">
               <path d="M22.4 8.3H1.7v-2h20.7z"/>
               <path d="M8 13.6L6.5 15 0 7.3 6.5 0 8 1.3l-5.4 6zm19.5-5.3h-3.8v-2h3.8z"/>
             </svg>
           </button>
-          <button class="relative w-16 h-8 xl:w-24 xl:h-12">
+          <button class="js-carousel-next relative w-16 h-8 xl:w-24 xl:h-12 z-20">
             <div class="absolute top-0 right-0 w-1/2 h-full bg-primary"></div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.5 15" fill="currentColor" class="absolute top-0 left-0 w-full h-full py-1 xl:py-2 text-secondary">
               <path d="M5.1 6.7h20.7v2H5.1z"/>
@@ -108,19 +124,36 @@
             </svg>
           </button>
         </div>
-        <div class="my-6 xl:mt-0 xl:mb-12 flex-1 xl:flex flex-col justify-center">
-          <h3 class="text-xl sm:text-3xl font-bold italic mb-6">Explanation</h3>
-          <div class="text-sm sm:text-xl leading-tight font-light">
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit consequatur quidem quos sed
-              enim ea fugiat voluptate placeat consectetur. Modi doloremque qui voluptates natus, consequuntur
-              incidunt similique voluptas cupiditate?
-            </p>
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit consequatur quidem quos sed
-              enim ea fugiat voluptate placeat consectetur. Modi doloremque qui voluptates natus, consequuntur
-              incidunt similique voluptas cupiditate?
-            </p>
+        <div class="js-carousel-descriptions my-6 xl:mt-0 xl:mb-12 flex-1 xl:flex items-center flex overflow-hidden">
+          <div class="flex-none w-full">
+            <h3 class="text-xl sm:text-3xl font-bold italic mb-6">Explanation</h3>
+            <div class="text-sm sm:text-xl leading-tight font-light">
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit consequatur quidem quos sed
+                enim ea fugiat voluptate placeat consectetur. Modi doloremque qui voluptates natus, consequuntur
+                incidunt similique voluptas cupiditate?
+              </p>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit consequatur quidem quos sed
+                enim ea fugiat voluptate placeat consectetur. Modi doloremque qui voluptates natus, consequuntur
+                incidunt similique voluptas cupiditate?
+              </p>
+            </div>
+          </div>
+          <div class="flex-none w-full">
+            <h3 class="text-xl sm:text-3xl font-bold italic mb-6">Explanation2</h3>
+            <div class="text-sm sm:text-xl leading-tight font-light">
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit consequatur quidem quos sed
+                enim ea fugiat voluptate placeat consectetur. Modi doloremque qui voluptates natus, consequuntur
+                incidunt similique voluptas cupiditate?
+              </p>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit consequatur quidem quos sed
+                enim ea fugiat voluptate placeat consectetur. Modi doloremque qui voluptates natus, consequuntur
+                incidunt similique voluptas cupiditate?
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -129,7 +162,7 @@
       </div>
     </div>
 
-    <div id="section-4" class="p-8 xl:py-16 min-h-screen flex items-center">
+    <div id="section-4" class="p-8 xl:py-16 flex items-center">
       <div class="xl:flex max-w-screen-xl mx-auto">
         <div class="text-xl sm:text-2xl font-light leading-tight xl:w-1/2 xl:-mr-10 z-10">
           <div class="border border-primary p-6 xl:pl-20 xl:pr-32 xl:py-32">
@@ -220,6 +253,26 @@
         NGOs SUPPORTING OUR CALL
       </h1>
       <div class="grid grid-cols-3 sm:grid-cols-4 xl:grid-cols-7 gap-4 max-w-screen-xl mx-auto">
+        <div class="relative pb-square bg-white">
+          <div class="absolute h-full w-full flex items-center p-3 sm:p-6">
+            <img src="djnd-logo.svg" alt="DJND logo">
+          </div>
+        </div>
+        <div class="relative pb-square bg-white">
+          <div class="absolute h-full w-full flex items-center p-3 sm:p-6">
+            <img src="gong-logo.png" alt="Gong logo" style="filter:brightness(0)">
+          </div>
+        </div>
+        <div class="relative pb-square bg-white">
+          <div class="absolute h-full w-full">
+            {icon}
+          </div>
+        </div>
+        <div class="relative pb-square bg-white">
+          <div class="absolute h-full w-full">
+            {icon}
+          </div>
+        </div>
         <div class="relative pb-square bg-white">
           <div class="absolute h-full w-full">
             {icon}
