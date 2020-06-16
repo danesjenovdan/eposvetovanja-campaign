@@ -2,14 +2,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ea5658">
-    <title>Document30</title>
+
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+    <meta name="theme-color" content="#ea5658">
+
+    <title>Uvažite naš glas (i između izbora)</title>
+    <meta name="description" content="{{description}}" />
+    <meta name="author" content="Danes je nov dan & Gong" />
+
+    <meta name="twitter:title" content="{{title}}" />
+    <meta name="twitter:description" content="{{description}}" />
+    <meta name="twitter:image" content="{{ogimage}}/og_image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@danesjenovdan" />
+
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:image" content="{{ogimage}}/og_image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:type" content="website" />
   </head>
   <body>
     <div id="section-1" class="px-8 pb-10 pt-32 relative h-screen bg-gradient-primary">
-      <div class="fixed top-0 inset-x-0 xl:right-auto z-50">
+      <div class="absolute xl:fixed top-0 inset-x-0 xl:right-auto z-50">
         <div class="w-24 sm:w-32 p-4 mx-auto bg-gradient-white xl:mt-6">
           <img src="https://cdn.parlametar.hr/v1/parlassets/img/logo-parlameter.svg" alt="Parlametar logo">
         </div>
@@ -32,7 +49,7 @@
     <div id="section-2" class="px-8 pt-10 pb-16 xl:pt-16 xl:pb-32 relative h-screen bg-gradient-secondary flex flex-col">
       <div>
         <h1 class="sm:mt-8 mb-8 text-4xl sm:text-6xl italic font-medium leading-tight text-center max-w-screen-lg mx-auto">
-          VLASTI NE ŽELE UVAŽITI NAŠ GLAS.
+          VLASTI NE UVAŽAVAJU NAŠ GLAS.
         </h1>
       </div>
       <h2 class="text-center text-xl sm:text-2xl font-light leading-tight px-4 mb-4 xl:mb-16">
@@ -108,7 +125,7 @@
         </div>
         <div class="js-carousel-descriptions my-6 xl:mt-0 xl:mb-12 flex-1 xl:flex items-center flex overflow-hidden">
           <div class="flex-none w-full">
-            <!-- <h3 class="text-xl sm:text-3xl font-bold italic mb-6">TODO</h3> -->
+            <h3 class="text-xl sm:text-3xl font-bold italic mb-6">Zakon pisan u tajnosti</h3>
             <div class="text-sm sm:text-xl leading-tight font-light">
               <p class="mb-4">
                 Lex Agrokor ili Zakon o postupku izvanredne uprave u trgovačkim društvima od sistemskog značaja za
@@ -117,13 +134,13 @@
                 konzultanata koji su kasnije, na temelju njega, angažirani na milijunskim poslovima u Agrokoru.
               </p>
               <p class="mb-4">
-                Vlasti su dužne provoditi savjetovanje s javnošću pri donošenju odluka kojima se utječe na interese
-                građanki, građana i pravnih osoba (Zakon o pravu na pristup informacijama, čl. 11 st. 1).
+                <em>Vlasti su dužne provoditi savjetovanje s javnošću pri donošenju odluka kojima se utječe na interese
+                građanki, građana i pravnih osoba (Zakon o pravu na pristup informacijama, čl. 11 st. 1).</em>
               </p>
             </div>
           </div>
           <div class="flex-none w-full">
-            <!-- <h3 class="text-xl sm:text-3xl font-bold italic mb-6">TODO</h3> -->
+            <h3 class="text-xl sm:text-3xl font-bold italic mb-6">Najkraće savjetovanje</h3>
             <div class="text-sm sm:text-xl leading-tight font-light">
               <p class="mb-4">
                 Samo šest dana bilo je otvoreno za komentare javno savjetovanje o Zakonu o minimalnoj plaći, iako
@@ -132,14 +149,14 @@
                 Ponekad ne traju ni 10 dana.
               </p>
               <p class="mb-4">
-                Vlasti su dužne provesti savjetovanje s javnošću u pravilu u trajanju od 30 dana (Zakon o pravu na
+                <em>Vlasti su dužne provesti savjetovanje s javnošću u pravilu u trajanju od 30 dana (Zakon o pravu na
                 pristup informacijama, čl. 11 st. 3.), a poželjno je da ne bude kraći od 15 dana (Kodeks savjetovanja
-                sa zainteresiranom javnošću Vlade RH V. poglavlje tč. 3.).
+                sa zainteresiranom javnošću Vlade RH V. poglavlje tč. 3.).</em>
               </p>
             </div>
           </div>
           <div class="flex-none w-full">
-            <!-- <h3 class="text-xl sm:text-3xl font-bold italic mb-6">TODO</h3> -->
+            <h3 class="text-xl sm:text-3xl font-bold italic mb-6">U očekivanju izvješća</h3>
             <div class="text-sm sm:text-xl leading-tight font-light">
               <p class="mb-4">
                 Objava izvješća nakon savjetovanja o izmjenama Zakona o najmu stanova odgađana je gotovo devet mjeseci
@@ -148,7 +165,7 @@
                 u kojima žive ili ih otkupiti po cijeni koju odredi vlasnik.
               </p>
               <p class="mb-4">
-                Razuman rok u kojem bi vlasti trebale objaviti izvješće o provedenom savjetovanju nije propisan.
+                <em>Razuman rok u kojem bi vlasti trebale objaviti izvješće o provedenom savjetovanju nije propisan.</em>
               </p>
             </div>
           </div>
@@ -335,80 +352,107 @@
       <div class="max-w-screen-xl mx-auto">
         <div class="flex flex-wrap -mx-2">
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
-                <img src="logos/biom.jpg" alt="biom logo" class="w-full">
-              </div>
+            <div class="relative pt-square bg-white group">
+              <a href="https://www.biom.hr/" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/biom.png" alt="biom logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
-                <img src="logos/cms.jpg" alt="cms logo" class="w-full">
-              </div>
+            <div class="relative pt-square bg-white group">
+              <a href="https://www.cms.hr/" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/cms.png" alt="cms logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
-                <img src="logos/crosol.jpg" alt="crosol logo" class="w-full">
-              </div>
+            <div class="relative pt-square bg-white group">
+              <a href="" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/code4cro.png" alt="code 4 cro logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+            <div class="relative pt-square bg-white group">
+              <a href="http://crosol.hr/hr/" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/crosol.png" alt="crosol logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
+            </div>
+          </div>
+          <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
+            <div class="relative pt-square bg-white group">
+              <a href="" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
                 <img src="djnd-logo.svg" alt="djnd logo" class="w-full">
-              </div>
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
-                <img src="logos/documenta.jpg" alt="documenta logo" class="w-full">
-              </div>
+            <div class="relative pt-square bg-white group">
+              <a href="https://www.documenta.hr/hr/naslovnica.html" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/documenta.png" alt="documenta logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+            <div class="relative pt-square bg-white group">
+              <a href="" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
                 <img src="gong-logo.png" alt="Gong logo" class="w-full">
-              </div>
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
-                <img src="logos/info-zona.jpg" alt="info zona logo" class="w-full">
-              </div>
+            <div class="relative pt-square bg-white group">
+              <a href="http://infozona.hr/" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/info-zona.png" alt="info zona logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
-                <img src="logos/izvor.jpg" alt="izvor logo" class="w-full">
-              </div>
+            <div class="relative pt-square bg-white group">
+              <a href="http://www.zenska-udruga-izvor.hr/" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/izvor.png" alt="izvor logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
-                <img src="logos/pride.jpg" alt="pride logo" class="w-full">
-              </div>
+            <div class="relative pt-square bg-white group">
+              <a href="http://rctzg.hr/-/" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/rct.png" alt="rct zagreb logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
-                <img src="logos/rct.jpg" alt="rct logo" class="w-full">
-              </div>
+            <div class="relative pt-square bg-white group">
+              <a href="http://yihr.hr/hr/" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/yihr.png" alt="yihr logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
           <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
-            <div class="relative pt-square bg-white">
-              <div class="absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
-                <img src="logos/zelena-istra.jpg" alt="zelena istra logo" class="w-full">
-              </div>
+            <div class="relative pt-square bg-white group">
+              <a href="https://www.zagreb-pride.net/hr/" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/pride.png" alt="zagreb pride logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
+            </div>
+          </div>
+          <div class="w-1/3 sm:w-1/4 xl:w-1/6 mb-4 px-2">
+            <div class="relative pt-square bg-white group">
+              <a href="https://www.zelena-istra.hr/hr/" target="_blank" class="block absolute top-0 left-0 h-full w-full flex items-center p-3 sm:p-8">
+                <img src="logos/zelena-istra.png" alt="zelena istra logo" class="w-full">
+              </a>
+              <div class="absolute top-0 w-full h-full group-hover:bg-secondary opacity-25 pointer-events-none"></div>
             </div>
           </div>
         </div>
