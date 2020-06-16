@@ -10,6 +10,16 @@ if (!Array.prototype.findIndex) {
   document.body.appendChild(script);
 }
 
+// fix 100vh on mobile
+const fixHeights = debounce(() => {
+  u('.h-screen').each((el) => {
+    el.style.height = `${window.innerHeight}px`;
+  });
+}, 250);
+
+u([document]).on('DOMContentLoaded', fixHeights);
+u([window]).on('resize', fixHeights);
+
 // evading button
 u('.js-evading-button').on('mouseover touchstart click', (event) => {
   event.preventDefault();
@@ -66,7 +76,10 @@ u('.pie-segment').on('mouseout', (event) => {
     change(i);
   });
 
-  window.onresize = debounce(() => {
-    change(index);
-  }, 250);
+  u([window]).on(
+    'resize',
+    debounce(() => {
+      change(index);
+    }, 250),
+  );
 })();
