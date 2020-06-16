@@ -5,6 +5,9 @@ module.exports = {
       sans: ['Roboto', 'sans-serif'],
     },
     extend: {
+      screens: {
+        xxl: '1530px',
+      },
       colors: {
         primary: '#ea5658',
         secondary: '#258498',
@@ -17,7 +20,7 @@ module.exports = {
       },
       inset: {
         '1/2': '50%',
-        '-40': '-10rem',
+        '-32': '-8rem',
       },
     },
   },

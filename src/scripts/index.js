@@ -17,7 +17,7 @@ const fixHeights = debounce(() => {
   });
 }, 250);
 
-u([document]).on('DOMContentLoaded', fixHeights);
+fixHeights();
 u([window]).on('resize', fixHeights);
 
 // evading button
