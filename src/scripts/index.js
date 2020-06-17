@@ -38,12 +38,54 @@ u('a[href^="#"').on('click', (event) => {
 });
 
 // chart hover
-u('.pie-segment').on('mouseover', (event) => {
-  event.currentTarget.style.fill = '#92c1cb';
-});
-u('.pie-segment').on('mouseout', (event) => {
-  event.currentTarget.style.fill = '';
-});
+(function chart() {
+  const months = {
+    jan: 'siječanj',
+    feb: 'veljača',
+    mar: 'ožujak',
+    apr: 'travanj',
+    may: 'svibanj',
+    jun: 'lipanj',
+    jul: 'srpanj',
+    aug: 'kolovoz',
+    sep: 'rujan',
+    oct: 'listopad',
+    nov: 'studeni',
+    dec: 'prosinac',
+  };
+  const percents = {
+    jan: '5,40',
+    feb: '5,40',
+    mar: '2,80',
+    apr: '4,10',
+    may: '5,20',
+    jun: '4,40',
+    jul: '8,58',
+    aug: '10,79',
+    sep: '9,88',
+    oct: '9,18',
+    nov: '6,59',
+    dec: '3,10',
+  };
+
+  const tooltip = u('.js-segment-tooltip').nodes[0];
+  u('.js-pie-segment').on('mouseover', (event) => {
+    const month = u(event.currentTarget).data('month');
+    const monthName = months[month];
+    if (monthName) {
+      event.currentTarget.style.fill = '#92c1cb';
+      tooltip.style.display = 'block';
+      tooltip.style.top = `${event.clientY + 12}px`;
+      const left = Math.min(event.clientX + 12, window.innerWidth - 150);
+      tooltip.style.left = `${left}px`;
+      tooltip.textContent = `${percents[month]}% ${monthName}`;
+    }
+  });
+  u('.js-pie-segment').on('mouseout', (event) => {
+    event.currentTarget.style.fill = '';
+    tooltip.style.display = '';
+  });
+})();
 
 // carousel
 (function carousel() {

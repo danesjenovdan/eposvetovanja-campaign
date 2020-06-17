@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div id="section-2" class="px-8 pt-10 pb-16 xl:pt-16 xl:pb-32 relative h-screen bg-gradient-secondary flex flex-col">
+    <div id="section-2" class="px-8 pt-10 pb-16 xl:pt-16 xl:pb-32 relative min-h-screen bg-gradient-secondary flex flex-col">
       <div>
         <h1 class="sm:mt-8 mb-8 text-4xl sm:text-6xl italic font-medium leading-tight text-center max-w-screen-lg mx-auto">
           VLASTI NE UVAŽAVAJU NAŠ GLAS.
@@ -55,28 +55,41 @@
       <h2 class="text-center text-xl sm:text-2xl font-light leading-tight px-4 mb-4 xl:mb-16">
         Savjetovanje s javnošću jedini je svima jednako dostupan mehanizam sudjelovanja u odlukama vlasti.
       </h2>
-      <div class="flex-1 relative">
-        <div class="absolute w-full h-full flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 714.67 714.33" class="w-full h-3/4">
-            <defs><style>.cls-1 {fill: #fff;}.cls-1,.cls-2 {stroke: #231f20;stroke-miterlimit: 10;stroke-width: 10px;}.cls-2 {fill: #e95658;}</style></defs>
-            <g>
+      <div>
+        <div class="relative mb-8" style="height:550px">
+          <div class="absolute top-0 left-0 w-full h-full flex items-center z-40">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 714.67 714.33" class="w-full h-3/4">
+              <defs><style>.cls-1{fill:#fff}.cls-1,.cls-2,.cls-3{stroke:#231f20;stroke-miterlimit:10;stroke-width:10px}.cls-2{fill:#e95658}.cls-3{fill:#258498}</style></defs>
               <g>
-                <path class="cls-1 pie-segment" d="M357.5,5a340.56,340.56,0,0,0-67.19,6.47L312,123a239.37,239.37,0,0,1,45.51-4.36Z"/>
-                <path class="cls-1 pie-segment" d="M312,123,290.31,11.51c-48.69,9.45-88.61,26-129.74,53.73l63.53,94.17A237.26,237.26,0,0,1,312,123Z"/>
-                <path class="cls-1 pie-segment" d="M224.1,159.41,160.57,65.24c-57.24,38.58-96.7,85.6-124.78,148.68l103.78,46.2A239.52,239.52,0,0,1,224.1,159.41Z"/>
-                <path class="cls-1 pie-segment" d="M119,357.16a237.68,237.68,0,0,1,20.58-97L35.79,213.92c-30.22,67.88-38.16,137.5-24,210.43l111.53-21.68A239.52,239.52,0,0,1,119,357.16Z"/>
-                <path class="cls-1 pie-segment" d="M123.35,402.67,11.82,424.35c15.51,79.8,49.61,140.11,110,194.51l76.05-84.47A238.14,238.14,0,0,1,123.35,402.67Z" />
-                <path class="cls-1 pie-segment" d="M197.93,534.41l-76,84.45c47.92,43.2,99.2,69.33,162.37,82.76l23.62-111.14A237.74,237.74,0,0,1,197.93,534.41Z"/>
-                <path class="cls-1 pie-segment" d="M307.91,590.48,284.29,701.62h0a349.67,349.67,0,0,0,97.77,6.84l-7.92-113.39c-5.5.38-11.05.59-16.64.59A239,239,0,0,1,307.91,590.48Z"/>
-                <path class="cls-1 pie-segment" d="M374.14,595.07l7.92,113.34c39-2.73,71.11-10.14,107.36-24.79L446.88,578.33A237.19,237.19,0,0,1,374.14,595.07Z"/>
-                <path class="cls-1 pie-segment" d="M446.88,578.33l42.54,105.29a329.13,329.13,0,0,0,75.07-41.56l-66.8-91.95A237.87,237.87,0,0,1,446.88,578.33Z"/>
-                <path class="cls-1 pie-segment" d="M529.05,522.83a239.68,239.68,0,0,1-31.36,27.28l66.8,91.95h0l0,0a343,343,0,0,0,46.33-40.3h0Z"/>
-                <path class="cls-1 pie-segment" d="M573.68,458a238.71,238.71,0,0,1-44.62,64.83l81.77,79A338.47,338.47,0,0,0,676.66,506h0l0,0Z"/>
-                <path class="cls-1 pie-segment" d="M594.71,382.11a237,237,0,0,1-21,75.86l103,48a338.23,338.23,0,0,0,31.07-112Z"/>
-                <path class="cls-2 pie-segment" d="M596,357.16a242,242,0,0,1-1.3,24.95l113,11.9a287.19,287.19,0,0,0,1.92-36.85C709.65,162.66,552,5,357.5,5V118.65C489.22,118.65,596,225.43,596,357.16Z"/>
+                <g>
+                  <path class="cls-1 js-pie-segment" data-month="dec" d="M357.5,5a340.56,340.56,0,0,0-67.19,6.47L312,123a239.37,239.37,0,0,1,45.51-4.36Z"/>
+                  <path class="cls-1 js-pie-segment" data-month="nov" d="M312,123,290.31,11.51c-48.69,9.45-88.61,26-129.74,53.73l63.53,94.17A237.26,237.26,0,0,1,312,123Z"/>
+                  <path class="cls-1 js-pie-segment" data-month="oct" d="M224.1,159.41,160.57,65.24c-57.24,38.58-96.7,85.6-124.78,148.68l103.78,46.2A239.52,239.52,0,0,1,224.1,159.41Z"/>
+                  <path class="cls-1 js-pie-segment" data-month="sep" d="M119,357.16a237.68,237.68,0,0,1,20.58-97L35.79,213.92c-30.22,67.88-38.16,137.5-24,210.43l111.53-21.68A239.52,239.52,0,0,1,119,357.16Z"/>
+                  <path class="cls-3 js-pie-segment" data-month="aug" d="M123.35,402.67,11.82,424.35c15.51,79.8,49.61,140.11,110,194.51l76.05-84.47A238.14,238.14,0,0,1,123.35,402.67Z" />
+                  <path class="cls-1 js-pie-segment" data-month="jul" d="M197.93,534.41l-76,84.45c47.92,43.2,99.2,69.33,162.37,82.76l23.62-111.14A237.74,237.74,0,0,1,197.93,534.41Z"/>
+                  <path class="cls-1 js-pie-segment" data-month="jun" d="M307.91,590.48,284.29,701.62h0a349.67,349.67,0,0,0,97.77,6.84l-7.92-113.39c-5.5.38-11.05.59-16.64.59A239,239,0,0,1,307.91,590.48Z"/>
+                  <path class="cls-1 js-pie-segment" data-month="may" d="M374.14,595.07l7.92,113.34c39-2.73,71.11-10.14,107.36-24.79L446.88,578.33A237.19,237.19,0,0,1,374.14,595.07Z"/>
+                  <path class="cls-1 js-pie-segment" data-month="apr" d="M446.88,578.33l42.54,105.29a329.13,329.13,0,0,0,75.07-41.56l-66.8-91.95A237.87,237.87,0,0,1,446.88,578.33Z"/>
+                  <path class="cls-1 js-pie-segment" data-month="mar" d="M529.05,522.83a239.68,239.68,0,0,1-31.36,27.28l66.8,91.95h0l0,0a343,343,0,0,0,46.33-40.3h0Z"/>
+                  <path class="cls-1 js-pie-segment" data-month="feb" d="M573.68,458a238.71,238.71,0,0,1-44.62,64.83l81.77,79A338.47,338.47,0,0,0,676.66,506h0l0,0Z"/>
+                  <path class="cls-1 js-pie-segment" data-month="jan" d="M594.71,382.11a237,237,0,0,1-21,75.86l103,48a338.23,338.23,0,0,0,31.07-112Z"/>
+                  <path class="cls-2 js-pie-segment" data-month="no" d="M596,357.16a242,242,0,0,1-1.3,24.95l113,11.9a287.19,287.19,0,0,0,1.92-36.85C709.65,162.66,552,5,357.5,5V118.65C489.22,118.65,596,225.43,596,357.16Z"/>
+                </g>
               </g>
-            </g>
-          </svg>
+            </svg>
+          </div>
+          <div class="max-w-screen-md w-full mx-auto relative h-full">
+            <div class="absolute top-0 right-0 bg-primary text-white w-48 p-2 border-2 border-black text-sm">
+              27,89% zakona bez savjetovanja s javnošću
+            </div>
+            <div class="absolute bottom-0 left-0 bg-secondary text-white w-48 p-2 border-2 border-black text-sm">
+              14,94% savjetovanja otvara se u kolovozu, za vrijeme saborske stanke, u sezoni godišnjih odmora
+            </div>
+            <div class="fixed bg-white p-2 border-2 border-black text-sm hidden z-50 js-segment-tooltip">
+              00,00% Ime meseca
+            </div>
+          </div>
         </div>
       </div>
       <div class="absolute left-0 right-0 bottom-0 text-center underline font-bold mb-8 xl:mb-12 text-secondary">
