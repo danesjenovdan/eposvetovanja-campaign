@@ -130,8 +130,23 @@ u('a[href^="#"').on('click', (event) => {
 
 // social buttons
 (function socials() {
+  const parties = {
+    bandic: 'BANDIĆ MILAN',
+    domovinski: 'DOMOVINSKI POKRET',
+    glas: 'GLAS',
+    hdz: 'HDZ',
+    hss: 'HSS',
+    ids: 'IDS',
+    most: 'MOST',
+    mozemo: 'MOŽEMO',
+    nlm: 'NLM',
+    restart: 'RESTART',
+    sdp: 'SDP',
+    sdss: 'SDSS',
+  };
+
   function openSocialShare(type, party) {
-    const fullParty = party === 'band' ? 'BANDIĆ MILAN' : party.toUpperCase();
+    const fullParty = parties[party];
     const link = `${document.location.href.split('?')[0]}?stranka=${party}`;
     const title = `Uvažava li ${fullParty} naš glas`;
     const text = `Iz ${fullParty} još nisu potvrdili da će uvažavati glas građanki i građana nakon izbora. Poručite ${fullParty} da nam moraju osigurati poštenu priliku da sudjelujemo u donošenju odluka koje nas se tiču.`;
@@ -174,7 +189,10 @@ S poštovanjem,`).replace(/%0A/g, '%0D%0A');
         nlm: 'info@nlm.hr;kznlm@sabor.hr',
         sdss: 'info@sdss.hr',
         most: 'ured@most-nl.com',
-        band: 'info@365ris.hr',
+        bandic: 'info@365ris.hr',
+        restart: 'ivana.tomic@koalicijarestart.hr',
+        mozemo: 'info@mozemo.hr',
+        domovinski: 'gradjani@domovinskipokret.hr',
       };
       const url =
         type === 'gmail'
