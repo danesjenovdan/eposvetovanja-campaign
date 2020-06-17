@@ -218,8 +218,8 @@ S poštovanjem,`).replace(/%0A/g, '%0D%0A');
     const el = u(event.currentTarget);
     const party = el.data('party');
     const showGmailLink = !/android|iphone/i.test(navigator.userAgent);
-    const replaced = el.replace(`
-      <div class="inline-flex mx-auto bg-primary border-2 border-black font-medium text-sm sm:text-xl py-1 px-0 sm:py-2 divide-x divide-black">
+    let replaced = el.replace(`
+      <div id="js-socials-${party}" class="inline-flex mx-auto bg-primary border-2 border-black font-medium text-sm sm:text-xl py-1 px-0 sm:py-2 divide-x divide-black">
         <button class="hover:opacity-50 js-social-icon" data-type="fb">
           ${icons.fb}
         </button>
@@ -236,7 +236,7 @@ S poštovanjem,`).replace(/%0A/g, '%0D%0A');
         }
       </div>
     `);
-
+    replaced = u(`#js-socials-${party}`); // fix ie
     replaced.on('click', '.js-social-icon', (evt) => {
       const ic = u(evt.currentTarget);
       const type = ic.data('type');
