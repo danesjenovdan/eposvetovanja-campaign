@@ -87,9 +87,10 @@ u('.pie-segment').on('mouseout', (event) => {
 // social buttons
 (function socials() {
   function openSocialShare(type, party) {
+    const fullParty = party === 'band' ? 'BANDIĆ MILAN' : party.toUpperCase();
     const link = `${document.location.href.split('?')[0]}?stranka=${party}`;
-    const title = `Uvažava li ${party.toUpperCase()} naš glas`;
-    const text = `Iz ${party.toUpperCase()} još nisu potvrdili da će uvažavati glas građanki i građana nakon izbora. Poručite ${party.toUpperCase()} da nam moraju osigurati poštenu priliku da sudjelujemo u donošenju odluka koje nas se tiču.`;
+    const title = `Uvažava li ${fullParty} naš glas`;
+    const text = `Iz ${fullParty} još nisu potvrdili da će uvažavati glas građanki i građana nakon izbora. Poručite ${fullParty} da nam moraju osigurati poštenu priliku da sudjelujemo u donošenju odluka koje nas se tiču.`;
     if (type === 'fb') {
       const encodedLink = encodeURIComponent(link);
       let url = `https://www.facebook.com/dialog/feed?app_id=217978989255065&ref=responsive`;
@@ -110,7 +111,7 @@ Pored toga, jedva 30% od zakona koji su bili otvoreni javnosti za prijedloge i k
 
 Savjetovanje s javnošću jednostavan je i svakom građaninu_ki dostupan mehanizam sudjelovanja u odlukama vlasti. Provođenje javnog savjetovanja pokazuje i koliko vlasti uvažavaju mišljenje svojih građanki i građana.
 
-Stoga pitamo buduće mandatare ${party.toUpperCase()} možete li se obvezati na poštivanje sljedećih standarda javnog savjetovanja:
+Stoga pitamo buduće mandatare ${fullParty} možete li se obvezati na poštivanje sljedećih standarda javnog savjetovanja:
 - obavezno javno savjetovanje za sve akte koji utječu na interese građana_ki,
 - 30 dana kao minimalni rok trajanja savjetovanja i jasno definirane iznimke,
 - pravovremena objava i ažuriranje plana savjetovanja,
@@ -120,10 +121,21 @@ Stoga pitamo buduće mandatare ${party.toUpperCase()} možete li se obvezati na 
 Hoćete li uvažavati naš glas i nakon izbora?
 
 S poštovanjem,`).replace(/%0A/g, '%0D%0A');
+      const emails = {
+        hdz: 'glasnogovornik@hdz.hr',
+        sdp: 'ivana.tomic@koalicijarestart.hr',
+        ids: 'ivana.tomic@koalicijarestart.hr;klubids@sabor.hr',
+        glas: 'ivana.tomic@koalicijarestart.hr;igor.kolman@glas.com.hr',
+        hss: 'ivana.tomic@koalicijarestart.hr;hss@hss.hr',
+        nlm: 'info@nlm.hr;kznlm@sabor.hr',
+        sdss: 'info@sdss.hr',
+        most: 'ured@most-nl.com',
+        band: 'info@365ris.hr',
+      };
       const url =
         type === 'gmail'
-          ? `https://mail.google.com/mail/?view=cm&fs=1&tf=1&su=${encodedSubject}&body=${encodedBody}`
-          : `mailto:?subject=${encodedSubject}&body=${encodedBody}`;
+          ? `https://mail.google.com/mail/?view=cm&to=${emails[party]}&su=${encodedSubject}&body=${encodedBody}`
+          : `mailto:${emails[party]}?subject=${encodedSubject}&body=${encodedBody}`;
       window.open(url, '_blank');
       // console.log(url);
     }
