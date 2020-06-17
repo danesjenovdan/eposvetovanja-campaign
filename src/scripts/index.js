@@ -40,6 +40,7 @@ u('a[href^="#"').on('click', (event) => {
 // chart hover
 (function chart() {
   const months = {
+    no: 'bez savjetovanja',
     jan: 'siječanj',
     feb: 'veljača',
     mar: 'ožujak',
@@ -54,6 +55,7 @@ u('a[href^="#"').on('click', (event) => {
     dec: 'prosinac',
   };
   const percents = {
+    no: '27,89',
     jan: '5,40',
     feb: '5,40',
     mar: '2,80',
@@ -76,9 +78,9 @@ u('a[href^="#"').on('click', (event) => {
       event.currentTarget.style.fill = '#92c1cb';
       tooltip.style.display = 'block';
       tooltip.style.top = `${event.clientY + 12}px`;
-      const left = Math.min(event.clientX + 12, window.innerWidth - 150);
+      const left = Math.min(event.clientX + 12, window.innerWidth - 130);
       tooltip.style.left = `${left}px`;
-      tooltip.textContent = `${percents[month]}% ${monthName}`;
+      tooltip.textContent = `${monthName}: ${percents[month]}%`;
     }
   });
   u('.js-pie-segment').on('mouseout', (event) => {
