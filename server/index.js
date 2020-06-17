@@ -10,7 +10,7 @@ function ogFromTemplate(party) {
   return {
     title: `Uvažava li ${party} naš glas`,
     description: `Iz ${party} još nisu potvrdili da će uvažavati glas građanki i građana nakon izbora. Tražimo pravovremenu najavu, primjereno trajanje i argumentirane odgovore vlasti na komentare pristigle na javnom savjetovanju. Poručite ${party} da imamo pravo sudjelovati u donošenju odluka koje nas se tiču.`,
-    og_image: `{ TODO: base url }og/${party.toLowerCase()}.jpg`,
+    og_image: `https://parlametar.hr/javno-savjetovanje/og/${party.toLowerCase()}.jpg`,
   };
 }
 
@@ -19,7 +19,7 @@ const ogData = {
     title: 'Uvažite naš glas i između izbora',
     description:
       'Savjetovanje s javnošću jednostavan je i svakom građaninu_ki dostupan mehanizam sudjelovanja u odlukama vlasti. Provođenje javnog savjetovanja pokazuje i koliko vlasti uvažavaju mišljenje svojih građanki i građana. Više od 20 posto zakonskih propisa donesenih u mandatu IX. saziva Hrvatskog sabora nije prošlo savjetovanje s javnošću.',
-    og_image: `{ TODO: base url }og/_default.jpg`,
+    og_image: `https://parlametar.hr/javno-savjetovanje/og/_default.jpg`,
   },
   band: ogFromTemplate('BANDIĆ MILAN'),
   glas: ogFromTemplate('GLAS'),
