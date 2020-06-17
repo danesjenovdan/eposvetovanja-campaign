@@ -119,12 +119,13 @@ Stoga pitamo buduće mandatare ${party.toUpperCase()} možete li se obvezati na 
 
 Hoćete li uvažavati naš glas i nakon izbora?
 
-S poštovanjem,`);
+S poštovanjem,`).replace(/%0A/g, '%0D%0A');
       const url =
         type === 'gmail'
-          ? `https://mail.google.com/mail/?view=cm&su=${encodedSubject}&body=${encodedBody}`
+          ? `https://mail.google.com/mail/?view=cm&fs=1&tf=1&su=${encodedSubject}&body=${encodedBody}`
           : `mailto:?subject=${encodedSubject}&body=${encodedBody}`;
       window.open(url, '_blank');
+      // console.log(url);
     }
   }
 
@@ -142,12 +143,23 @@ S poštovanjem,`);
   u('.js-social-button').on('click', (event) => {
     const el = u(event.currentTarget);
     const party = el.data('party');
+    const showGmailLink = !/android|iphone/i.test(navigator.userAgent);
     const replaced = el.replace(`
-      <div class="flex mx-auto bg-primary border-2 border-black font-medium text-sm sm:text-xl py-1 px-0 sm:py-2 divide-x divide-black">
-        <button class="hover:opacity-50 js-social-icon" data-type="fb">${icons.fb}</button>
-        <button class="hover:opacity-50 js-social-icon" data-type="tw">${icons.tw}</button>
-        <button class="hover:opacity-50 js-social-icon" data-type="mail">${icons.mail}</button>
-        <button class="hover:opacity-50 js-social-icon" data-type="gmail">${icons.gmail}</button>
+      <div class="inline-flex mx-auto bg-primary border-2 border-black font-medium text-sm sm:text-xl py-1 px-0 sm:py-2 divide-x divide-black">
+        <button class="hover:opacity-50 js-social-icon" data-type="fb">
+          ${icons.fb}
+        </button>
+        <button class="hover:opacity-50 js-social-icon" data-type="tw">
+          ${icons.tw}
+        </button>
+        <button class="hover:opacity-50 js-social-icon" data-type="mail">
+          ${icons.mail}
+        </button>
+        ${
+          showGmailLink
+            ? `<button class="hover:opacity-50 js-social-icon" data-type="gmail">${icons.gmail}</button>`
+            : ''
+        }
       </div>
     `);
 
