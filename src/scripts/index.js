@@ -161,21 +161,24 @@ u('a[href^="#"').on('click', (event) => {
       const url = `https://twitter.com/intent/tweet?text=${encodedTweet}`;
       window.open(url, '_blank');
     } else if (type === 'mail' || type === 'gmail') {
-      const encodedSubject = encodeURIComponent(title);
-      const encodedBody = encodeURIComponent(`Poštovani_e,
+      const encodedSubject = encodeURIComponent(
+        'Uvažite naš glas i između izbora',
+      );
+      const encodedBody = encodeURIComponent(`Poštovane političarke i političari iz ${fullParty},
 
-Na temelju podataka Parlametra, Gongove platforme za praćenje rada Hrvatskog sabora, i podataka portala eSavjetovanja, preko 20% zakonskih propisa donesenih u mandatu IX. saziva nije prošlo savjetovanje s javnošću.
+Na temelju podataka Parlametra, Gongove platforme za praćenje rada Hrvatskog sabora, i podataka portala eSavjetovanja, preko 20 posto zakonskih propisa donesenih u mandatu IX. saziva nije prošlo savjetovanje s javnošću.
 
-Pored toga, jedva 30% od zakona koji su bili otvoreni javnosti za prijedloge i komentare poštivalo je pravilo propisano Zakonom o pravu na pristup informacijama o trajanju od 30 dana. Dodatno, većina savjetovanja otvarala se za vrijeme ljetne stanke zasjedanja Sabora, najviše u kolovozu.
+Pored toga, samo 29 posto zakona na savjetovanju bilo je otvoreno 30 i više dana kako je  propisano Zakonom o pravu na pristup informacijama. Dodatno, većina savjetovanja otvarala se za vrijeme ljetne stanke zasjedanja Sabora, najviše u kolovozu.
 
-Savjetovanje s javnošću jednostavan je i svakom građaninu_ki dostupan mehanizam sudjelovanja u odlukama vlasti. Provođenje javnog savjetovanja pokazuje i koliko vlasti uvažavaju mišljenje svojih građanki i građana.
+Savjetovanje s javnošću jednostavan je i općoj javnosti dostupan mehanizam sudjelovanja u odlukama vlasti. Provođenje javnog savjetovanja pokazuje i koliko vlasti uvažavaju mišljenje svojih građanki i građana.
 
 Stoga pitamo buduće mandatare ${fullParty} možete li se obvezati na poštivanje sljedećih standarda javnog savjetovanja:
-- obavezno javno savjetovanje za sve akte koji utječu na interese građana_ki,
+- obavezno savjetovanje s javnošću za sve akte koji utječu na interese građanki i građana,
 - 30 dana kao minimalni rok trajanja savjetovanja i jasno definirane iznimke,
 - pravovremena objava i ažuriranje plana savjetovanja,
-- razumni rokovi za objavu izvješća o provedenom savjetovanju,
-- viši standardi za povratnu informaciju na pristigle komentare.
+- precizni rokovi za objavu izvješća o provedenom savjetovanju,
+- viši standardi za povratnu informaciju na pristigle komentare,
+- nastavak savjetovanja s javnošću u Saboru.
 
 Hoćete li uvažavati naš glas i nakon izbora?
 
@@ -199,7 +202,6 @@ S poštovanjem,`).replace(/%0A/g, '%0D%0A');
           ? `https://mail.google.com/mail/?view=cm&to=${emails[party]}&su=${encodedSubject}&body=${encodedBody}`
           : `mailto:${emails[party]}?subject=${encodedSubject}&body=${encodedBody}`;
       window.open(url, '_blank');
-      // console.log(url);
     }
   }
 
