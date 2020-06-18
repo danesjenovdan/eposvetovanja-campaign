@@ -131,18 +131,18 @@ u('a[href^="#"').on('click', (event) => {
 // social buttons
 (function socials() {
   const parties = {
-    bandic: 'BANDIĆ MILAN',
+    // bandic: 'BANDIĆ MILAN',
     domovinski: 'DOMOVINSKI POKRET',
-    glas: 'GLAS',
+    // glas: 'GLAS',
     hdz: 'HDZ',
-    hss: 'HSS',
-    ids: 'IDS',
+    // hss: 'HSS',
+    // ids: 'IDS',
     most: 'MOST',
     mozemo: 'MOŽEMO',
-    nlm: 'NLM',
+    // nlm: 'NLM',
     restart: 'RESTART',
-    sdp: 'SDP',
-    sdss: 'SDSS',
+    // sdp: 'SDP',
+    // sdss: 'SDSS',
   };
 
   function openSocialShare(type, party) {
@@ -185,14 +185,14 @@ Hoćete li uvažavati naš glas i nakon izbora?
 S poštovanjem,`).replace(/%0A/g, '%0D%0A');
       const emails = {
         hdz: 'glasnogovornik@hdz.hr',
-        sdp: 'ivana.tomic@koalicijarestart.hr',
-        ids: 'ivana.tomic@koalicijarestart.hr;klubids@sabor.hr',
-        glas: 'ivana.tomic@koalicijarestart.hr;igor.kolman@glas.com.hr',
-        hss: 'ivana.tomic@koalicijarestart.hr;hss@hss.hr',
-        nlm: 'info@nlm.hr;kznlm@sabor.hr',
-        sdss: 'info@sdss.hr',
+        // sdp: 'ivana.tomic@koalicijarestart.hr',
+        // ids: 'ivana.tomic@koalicijarestart.hr;klubids@sabor.hr',
+        // glas: 'ivana.tomic@koalicijarestart.hr;igor.kolman@glas.com.hr',
+        // hss: 'ivana.tomic@koalicijarestart.hr;hss@hss.hr',
+        // nlm: 'info@nlm.hr;kznlm@sabor.hr',
+        // sdss: 'info@sdss.hr',
         most: 'ured@most-nl.com',
-        bandic: 'info@365ris.hr',
+        // bandic: 'info@365ris.hr',
         restart: 'ivana.tomic@koalicijarestart.hr',
         mozemo: 'info@mozemo.hr',
         domovinski: 'gradjani@domovinskipokret.hr',
