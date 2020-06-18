@@ -55,19 +55,19 @@ u('a[href^="#"').on('click', (event) => {
     dec: 'prosinac',
   };
   const percents = {
-    no: '27,89',
-    jan: '5,40',
-    feb: '5,40',
-    mar: '2,80',
-    apr: '4,10',
-    may: '5,20',
-    jun: '4,40',
-    jul: '8,58',
-    aug: '10,79',
-    sep: '9,88',
-    oct: '9,18',
-    nov: '6,59',
-    dec: '3,10',
+    no: '28,39',
+    jan: '4,85',
+    feb: '5,82',
+    mar: '3,19',
+    apr: '4,57',
+    may: '5,40',
+    jun: '5,12',
+    jul: '3,05',
+    aug: '13,02',
+    sep: '5,26',
+    oct: '9,70',
+    nov: '8,17',
+    dec: '3,46',
   };
 
   const tooltip = u('.js-segment-tooltip').nodes[0];
