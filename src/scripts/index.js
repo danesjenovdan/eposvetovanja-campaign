@@ -128,6 +128,37 @@ u('a[href^="#"').on('click', (event) => {
   );
 })();
 
+// thumbs hover
+(function thumbs() {
+  const texts = {
+    // domovinski: '',
+    hdz:
+      '“Odgovoramo pozitivno, iako u zakonu postoje odrednice koje omogućuju kraće rokove.”',
+    // most: '',
+    mozemo: '“Potvrđujemo da se obvezujemo poštivati navedene standarde”',
+    restart:
+      '“Koalicija Restart prihvaća sve navedene standarde u savjetovanju s javnošću.”',
+  };
+
+  const tooltip = u('.js-thumbs-tooltip').nodes[0];
+  u('.js-thumbs-icon').on('mouseover', (event) => {
+    const party = u(event.currentTarget).data('party');
+    const text = texts[party];
+    if (text) {
+      event.currentTarget.style.background = '#92c1cb';
+      tooltip.style.display = 'block';
+      tooltip.style.top = `${event.clientY + 12}px`;
+      const left = Math.min(event.clientX + 12, window.innerWidth - 240);
+      tooltip.style.left = `${left}px`;
+      tooltip.textContent = text;
+    }
+  });
+  u('.js-thumbs-icon').on('mouseout', (event) => {
+    event.currentTarget.style.background = '';
+    tooltip.style.display = '';
+  });
+})();
+
 // social buttons
 (function socials() {
   const parties = {
@@ -144,6 +175,9 @@ u('a[href^="#"').on('click', (event) => {
     // sdp: 'SDP',
     // sdss: 'SDSS',
   };
+  const twitters = {
+    most: '@NLMost',
+  };
 
   function openSocialShare(type, party) {
     const fullParty = parties[party];
@@ -157,7 +191,8 @@ u('a[href^="#"').on('click', (event) => {
       url += `&name=${encodeURIComponent(title)}`;
       window.open(url, '_blank');
     } else if (type === 'tw') {
-      const encodedTweet = encodeURIComponent(`${text} ${link}`);
+      const twitter = twitters[party] || '';
+      const encodedTweet = encodeURIComponent(`${text} ${twitter} ${link}`);
       const url = `https://twitter.com/intent/tweet?text=${encodedTweet}`;
       window.open(url, '_blank');
     } else if (type === 'mail' || type === 'gmail') {
